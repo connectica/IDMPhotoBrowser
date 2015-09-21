@@ -144,7 +144,7 @@ caption = _caption;
             AFImageResponseSerializer *serializer = [AFImageResponseSerializer serializer];
             NSSet *contentTypes = [serializer.acceptableContentTypes setByAddingObject:@"binary/octet-stream"];
             serializer.acceptableContentTypes = contentTypes;
-            op.serializer = serializer;
+            op.responseSerializer = serializer;
 
             [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
                 UIImage *image = responseObject;
